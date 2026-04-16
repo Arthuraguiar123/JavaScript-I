@@ -1,5 +1,7 @@
 const livros = require('./listaLivros');
 
+function menorValor(arrProdutos, posicaoInicial) {
+
 let maisBaratos = 0;
 
 for (let atual = 0; atual < livros.length; atual++) {
@@ -7,6 +9,9 @@ for (let atual = 0; atual < livros.length; atual++) {
         maisBaratos = atual
     }
 }
+}
+
+
 
 console.log(`o livro mais barato custa ${livros[maisBaratos].preco} e o titulo é ${livros[maisBaratos].titulo}`)
 
