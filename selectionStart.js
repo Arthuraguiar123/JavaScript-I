@@ -1,16 +1,20 @@
 const livros = require('./listaLivros');
-const menorValor = require('./menorValor');
+const menorValor = require("./menorValor");
 
+                    
+    for (let atual = 0; atual < livros.length; atual++) {
 
-for (let atual = 0; atual < livros.length -1; atual++) {
-let menor = menorValor (livros, atual)
-let livroAtual = livros [atual];
-console.log('posição atual', atual)
-console.log('livro atual', livros[atual])
-let livroMenorPreco = livros[menor];
-console.log('livro menor preço', livros[menor])
+        let menor = menorValor(livros, atual)
 
-livros[atual] = livroMenorPreco
-livros[menor] = livroAtual 
- 
-}
+        let livrosAtual = livros[atual];
+        console.log('posição atual', atual)
+        console.log('livro atual', livros[atual])
+        let livrosMenorPreco = livros[menor];
+        console.log('livro menor preço', livros[atual])
+
+        livros[atual] = livrosMenorPreco
+        livros[menor] = livrosAtual
+
+    }
+
+    console.log(livros)
